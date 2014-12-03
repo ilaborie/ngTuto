@@ -207,3 +207,57 @@ Utilisation du filtre
 
     <div class="date" title="{{mail.date}}">{{mail.date | fromNow}}</div>
 
+7. Routing
+----------
+
+Création d'une nouvelle route pour composer un mail:
+
+    yo angular-fullstack:route compose
+
+Déclarer cette route dans la bar de navigation.
+
+    $scope.menu = [
+          {'title': 'Home', 'link': '/'},
+          {'title': 'Compose', 'link': '/compose'}
+        ];
+    
+Créer un formulaire pour l'envoie du mail.
+
+    <div ng-include="'components/navbar/navbar.html'"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+    
+          <form role="form" class="well">
+    
+            <div class="form-group">
+              <label for="to">To</label>
+              <input type="email" class="form-control" id="to"
+                     placeholder="Enter email">
+            </div>
+    
+            <div class="form-group">
+              <label for="subject">Title</label>
+              <input type="text" class="form-control" id="subject"
+                     placeholder="Enter title">
+            </div>
+    
+            <div class="form-group">
+              <label for="body">Content</label>
+              <textarea id="body" class="form-control"
+                        cols="30" rows="10"
+                        placeholder="Enter content"></textarea>
+            </div>
+    
+            <div style="text-align: right">
+              <button type="submit" class="btn btn-primary">
+                <i class="fa fa-send"></i>
+                Send
+              </button>
+            </div>
+          </form>
+    
+        </div>
+      </div>
+    </div>
