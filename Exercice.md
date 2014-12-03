@@ -64,3 +64,10 @@ Créer une nouvelle directive mail pour l'affichage d'un mail
 Récupérer la bibliothèque momentjs
 Créer un nouveau filter pour le formatage des dates
 
+7. Routing
+----------
+
+Créer une nouvelle route pour composer un mail.
+Déclarer cette route dans la bar de navigation.
+Créer un formulaire pour l'envoie du mail.
+
