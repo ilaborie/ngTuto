@@ -71,3 +71,10 @@ Créer une nouvelle route pour composer un mail.
 Déclarer cette route dans la bar de navigation.
 Créer un formulaire pour l'envoie du mail.
 
+8. Form Binding
+---------------
+
+Créer un binding pour le mail.
+Implémenter l'envoie du mail en faisant simplement un console.log du mail.
+Ajouter la posibilité de configurer le titre et le to du mail
+
