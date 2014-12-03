@@ -184,3 +184,26 @@ Ajouter le mail dans le scope de la directive
 
     scope: { mail: "=" },
 
+6. Filter
+---------
+
+Récupération de la bibliothèque MomentJS
+
+    bower install --save moment
+    
+Création du filtre
+
+    yo angular-fullstack:filter fromNow
+    
+Déclaration de moment dans le module angular pour utiliser l'injection de dépendance
+
+    .constant("moment", moment)
+    
+Implementation du filtre
+
+    return moment(input).fromNow();
+    
+Utilisation du filtre
+
+    <div class="date" title="{{mail.date}}">{{mail.date | fromNow}}</div>
+

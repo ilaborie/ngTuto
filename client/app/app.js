@@ -7,6 +7,7 @@ angular.module('testApp', [
   'ngRoute',
   'ui.bootstrap'
 ])
+  .constant("moment", moment)
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .otherwise({
