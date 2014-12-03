@@ -59,3 +59,12 @@ Tester l'api des mails dans un navigateur ou dans un terminal:
 
     http :9000/api/mails
 
+2. Clean UI
+-----------
+
+Vider le MainCtrl.
+Utiliser Emmet (zencoding) dans la page main.html
+
+    .container>.row>.col-sm-12>ul.list-unstyled.mails>li{Mails...}
+    
+
