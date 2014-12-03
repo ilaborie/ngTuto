@@ -67,4 +67,61 @@ Utiliser Emmet (zencoding) dans la page main.html
 
     .container>.row>.col-sm-12>ul.list-unstyled.mails>li{Mails...}
     
+3. Controller & Templating
+--------------------------
 
+Créer un nouveau controller mails avec:
+
+    yo angular-fullstack:controller mails
+    
+Récupérer un model de mail dans la base
+
+    mongo test-dev --eval "JSON.stringify(db.mails.findOne(), false, 2)"
+
+Ajouter dans le scope du controller
+
+    $scope.mail = {
+      "_id": {
+        "str": "547f7be6a82a8395b89744dd"
+      },
+      "from": "bflores0@creativecommons.org",
+      "date": "2014-11-05T00:16:05Z",
+      "subject": "ut massa volutpat",
+      "body": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+      "star": null,
+      "attachment": null,
+      "folder": "inbox"
+    };
+    
+Déclaration du controller
+
+    ng-controller="MailsCtrl"
+    
+Affichage brute du mail
+      
+    <pre>{{mail | json}}</pre>
+  
+Affichage correct du mail
+
+    .mail>.date+.from+.title
+    
+    <div class="mail">
+      <div class="date">{{mail.date}}</div>
+      <div class="from"><a href="mailto:{{mail.from}}">{{mail.from}}</a></div>
+      <div class="title">{{mail.subject}}</div>
+    </div>  
+
+Améliorer le look dans le main.less
+
+    // Mail
+    .mail {
+      padding: .5em;
+    
+      .from {}
+      .date {
+        float: right;
+      }
+      .title {
+        font-weight: bold;
+      }
+    } 

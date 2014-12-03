@@ -1,10 +1,16 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="container">
+<div class="container" ng-controller="MailsCtrl">
   <div class="row">
     <div class="col-sm-12">
       <ul class="list-unstyled mails">
-        <li>Mails...</li>
+        <li>
+          <div class="mail">
+            <div class="date">{{mail.date}}</div>
+            <div class="from"><a href="mailto:{{mail.from}}">{{mail.from}}</a></div>
+            <div class="title">{{mail.subject}}</div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
