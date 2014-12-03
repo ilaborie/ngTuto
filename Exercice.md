@@ -44,3 +44,11 @@ Récupérer un model de mail dans la base, et l'ajouter dans le scope du control
 Utiliser ce controller pour afficher le contenu du mail dans la page HTML
 Créer un bloc pour afficher ce mail
 Améliorer le look dans le main.less
+
+4. Using Service
+----------------
+
+Remplacer le mail par un tableau de mail dans le scope du controller.
+Utiliser le service $http pour récuper les mails.
+Utiliser le templating angular pour l'affichage des mails
+Limiter à 10 l'affichage des mails.
