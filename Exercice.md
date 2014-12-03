@@ -58,3 +58,9 @@ Limiter à 10 l'affichage des mails.
 
 Créer une nouvelle directive mail pour l'affichage d'un mail
 
+6. Filter
+---------
+
+Récupérer la bibliothèque momentjs
+Créer un nouveau filter pour le formatage des dates
+
