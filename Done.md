@@ -166,3 +166,21 @@ Amélioration du style:
         box-shadow: 1px 1px 1em black;
       }
     }
+
+5. Directive
+------------
+
+Créer une nouvelle directive mail
+
+    yo angular-fullstack:directive myMail
+        
+Utiliser la directive dans le mail.html
+
+    <my-mail></my-mail>
+
+Déplacer le code correspondant dans le html et le less
+ 
+Ajouter le mail dans le scope de la directive
+
+    scope: { mail: "=" },
+
