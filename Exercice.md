@@ -36,3 +36,11 @@ Tester le service.
 Faire un tours du client.
 Remplacer l'application de test par un squelette de WebMail.
 
+3. Controller & Templating
+--------------------------
+
+Créer un nouveau controller mails.
+Récupérer un model de mail dans la base, et l'ajouter dans le scope du controller
+Utiliser ce controller pour afficher le contenu du mail dans la page HTML
+Créer un bloc pour afficher ce mail
+Améliorer le look dans le main.less
