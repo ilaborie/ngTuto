@@ -3,8 +3,22 @@
 <div class="container" ng-controller="MailsCtrl">
   <div class="row">
     <div class="col-sm-12">
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search"
+                   ng-model="search.subject">
+
+            <div class="input-group-addon">
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+        </div>
+      </form>
+      <hr>
+
       <ul class="list-unstyled mails">
-        <li ng-repeat="mail in mails | limitTo:16">
+        <li ng-repeat="mail in mails | filter:search | limitTo:16">
           <my-mail mail="mail"></my-mail>
         </li>
       </ul>

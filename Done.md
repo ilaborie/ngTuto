@@ -293,3 +293,25 @@ Ajouter la posibilité de configurer le titre et le to du mail
      
     <a ng-href="/compose?to={{mail.from}}">{{mail.from}}</a>
 
+9. Search in Mail
+-----------------
+
+Ajout d'un filtre
+
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Search">
+          <div class="input-group-addon">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </div>
+    </form>
+    <hr>
+    
+    ng-model="search.subject"
+    
+Utiliser le filtre search d'angular
+
+    | filter:search
