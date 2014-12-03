@@ -30,3 +30,9 @@ Créer un nouveau 'endpoint' mail dans l'application.
 Configurer le model d'un mail.
 Tester le service.
  
+2. Clean UI
+-----------
+
+Faire un tours du client.
+Remplacer l'application de test par un squelette de WebMail.
+
