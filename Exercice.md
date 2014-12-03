@@ -78,3 +78,8 @@ Créer un binding pour le mail.
 Implémenter l'envoie du mail en faisant simplement un console.log du mail.
 Ajouter la posibilité de configurer le titre et le to du mail
 
+9. Search in Mail
+-----------------
+
+Ajouter un filtre pour rechercher dans le titre des mails
+Utiliser le filtre search d'angular
