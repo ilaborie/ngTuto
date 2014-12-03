@@ -1,3 +1,24 @@
+@mailOver: #e0e9ff;
+@mailOdd: #ebebeb;
+@mailOddOver: #c2d4ff;
+
+// Mails
+ul li {
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+  border: thin solid transparent;
+
+  &:nth-child(odd) {
+    background-color: @mailOdd;
+  }
+
+  &:hover {
+    background-color: @mailOver;
+    border-color: darken(@mailOver,10%);
+    box-shadow: 1px 1px 1em black;
+  }
+}
+
 // Mail
 .mail {
   padding: .5em;

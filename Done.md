@@ -125,3 +125,44 @@ Améliorer le look dans le main.less
         font-weight: bold;
       }
     } 
+   
+4. Using Service
+----------------
+
+Utiliser le service $http pour récuper les mails.
+
+    $scope.mails = [];
+    $http.get("api/mails").success(function (mails) {
+      $scope.mails = mails;
+    });
+
+Utiliser le templating angular pour l'affichage des mails
+  
+    <li ng-repeat="mail in mails">
+
+Limiter à 10 l'affichage des mails.
+
+    <li ng-repeat="mail in mails | limitTo:16">
+    
+Amélioration du style:
+
+    @mailOver: #e0e9ff;
+    @mailOdd: #ebebeb;
+    @mailOddOver: #c2d4ff;
+    
+    // Mails
+    ul li {
+      border-radius: 4px;
+      margin-bottom: 0.5em;
+      border: thin solid transparent;
+    
+      &:nth-child(odd) {
+        background-color: @mailOdd;
+      }
+    
+      &:hover {
+        background-color: @mailOver;
+        border-color: darken(@mailOver,10%);
+        box-shadow: 1px 1px 1em black;
+      }
+    }
