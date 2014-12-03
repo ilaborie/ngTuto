@@ -1,5 +1,7 @@
 <div class="mail">
   <div class="date" title="{{mail.date}}">{{mail.date | fromNow}}</div>
-  <div class="from"><a href="mailto:{{mail.from}}">{{mail.from}}</a></div>
+  <div class="from">
+    <a ng-href="/compose?to={{mail.from}}">{{mail.from}}</a>
+  </div>
   <div class="title">{{mail.subject}}</div>
 </div>

@@ -1,20 +1,22 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="container">
+<div class="container" ng-controller="ComposeCtrl">
   <div class="row">
     <div class="col-sm-12">
 
-      <form role="form" class="well">
+      <form role="form" class="well" ng-submit="sendMail()">
 
         <div class="form-group">
           <label for="to">To</label>
           <input type="email" class="form-control" id="to"
+                 ng-model="mail.to"
                  placeholder="Enter email">
         </div>
 
         <div class="form-group">
           <label for="subject">Title</label>
           <input type="text" class="form-control" id="subject"
+                 ng-model="mail.subject"
                  placeholder="Enter title">
         </div>
 
@@ -22,6 +24,7 @@
           <label for="body">Content</label>
           <textarea id="body" class="form-control"
                     cols="30" rows="10"
+                    ng-model="mail.body"
                     placeholder="Enter content"></textarea>
         </div>
 

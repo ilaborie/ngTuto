@@ -261,3 +261,35 @@ Créer un formulaire pour l'envoie du mail.
         </div>
       </div>
     </div>
+
+8. Form Binding
+---------------
+
+Créer un binding pour le mail.
+    
+    ng-model="mail.to"
+    ng-model="mail.subject"
+    ng-model="mail.body"
+                        
+    <pre>{{mail | json}}</pre>
+
+Implémenter l'envoie du mail en faisant simplement un console.log du mail.
+
+    $scope.sendMail = function() {
+      console.log(JSON.stringify($scope.mail));
+    }
+    
+    ng-submit="sendMail()"
+
+Ajouter la posibilité de configurer le titre et le to du mail
+
+    $routeParams
+    
+    $scope.mail = {
+     to: $routeParams.to,
+     subject: $routeParams.subject,
+     body: null
+    };
+     
+    <a ng-href="/compose?to={{mail.from}}">{{mail.from}}</a>
+
