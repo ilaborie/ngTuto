@@ -52,3 +52,9 @@ Remplacer le mail par un tableau de mail dans le scope du controller.
 Utiliser le service $http pour récuper les mails.
 Utiliser le templating angular pour l'affichage des mails
 Limiter à 10 l'affichage des mails.
+
+5. Directive
+------------
+
+Créer une nouvelle directive mail pour l'affichage d'un mail
+
