@@ -83,3 +83,34 @@ Ajouter la posibilité de configurer le titre et le to du mail
 
 Ajouter un filtre pour rechercher dans le titre des mails
 Utiliser le filtre search d'angular
+
+10. Bonus
+---------
+
+### Forward, Reply (Controller, $location, Toast)
+Ajouter les actions Forward, Reply.
+Définir des fonctions javascript dans le controller adequat.
+Utiliser le service $location pour mettre
+
+### Gravatar (directive, bower, service)
+Créer une image [gravatar](https://fr.gravatar.com/) pour les mails.
+Utiliser une bibliotheque pour calculer le md5.
+Faire une directive pour cela
+
+### ShowMail (routes, bootstrap)
+Créer une nouvelle route pour afficher un mail.
+Utiliser un layout 2 colonne (liste des mails, mail courant).
+Masquer la liste des mails si la largeur de la page est insufisante.
+
+### Star ($http, font-awesome)
+Ajouter une icone pour montrer les mails favoris.
+Ajouter une action qui set le flag avec une mise à jour dans la base.
+Utiliser angular-toastr pour notifier le succes de l'opération.
+
+### Folder (Controller, route, $http)
+
+Ajouter un sous-menu pour les dossiers.
+Filtrer par dossiers.
+Ajouter un champs unread aux mail.
+Gérer ce champs dans la base.
+
